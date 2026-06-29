@@ -58,3 +58,11 @@ projectOutput.innerHTML = `
   <p>Tools: ${featuredProject.tools.join(", ")}</p>
   <a href="${featuredProject.liveLink}" target="_blank">View Live Project</a>
 `;
+const secondProject = {
+  name: "EmpowerMeTech",
+  type: "WordPress Website",
+  tools: ["WordPress", "Elementor", "Content Structure"],
+  liveLink: "https://empowermetech.org"
+};
+
+console.log("Second Project:", secondProject);
