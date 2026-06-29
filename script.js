@@ -66,3 +66,66 @@ const secondProject = {
 };
 
 console.log("Second Project:", secondProject);
+// Day 2 JavaScript Practice: Functions + Conditions
+
+const targetRole = "WordPress Developer";
+
+function hasSkill(skillList, skillName) {
+  return skillList.includes(skillName);
+}
+
+function checkWordPressDeveloperEligibility(skillList) {
+  const hasWordPress = hasSkill(skillList, "WordPress");
+  const hasElementor = hasSkill(skillList, "Elementor");
+  const hasHTML = hasSkill(skillList, "HTML");
+  const hasCSS = hasSkill(skillList, "CSS");
+
+  if (hasWordPress && hasElementor && hasHTML && hasCSS) {
+    return "Strong match for WordPress Developer roles.";
+  } else if (hasWordPress && hasElementor) {
+    return "Good match for WordPress Support or Elementor roles, but improve HTML and CSS.";
+  } else if (hasWordPress) {
+    return "Basic match. Improve Elementor, HTML, and CSS.";
+  } else {
+    return "Not ready yet for WordPress Developer roles.";
+  }
+}
+
+function checkFrontendDeveloperEligibility(skillList) {
+  const hasHTML = hasSkill(skillList, "HTML");
+  const hasCSS = hasSkill(skillList, "CSS");
+  const hasJavaScript = hasSkill(skillList, "JavaScript Basics");
+  const hasGit = hasSkill(skillList, "Git");
+
+  if (hasHTML && hasCSS && hasJavaScript && hasGit) {
+    return "Good beginner foundation for Frontend Developer path.";
+  } else if (hasHTML && hasCSS) {
+    return "You have layout basics, but need stronger JavaScript and Git.";
+  } else {
+    return "You need to strengthen HTML, CSS, JavaScript, and Git first.";
+  }
+}
+
+function createEligibilityReport(role, skillList) {
+  if (role === "WordPress Developer") {
+    return checkWordPressDeveloperEligibility(skillList);
+  } else if (role === "Frontend Developer") {
+    return checkFrontendDeveloperEligibility(skillList);
+  } else {
+    return "Role not found. Please choose WordPress Developer or Frontend Developer.";
+  }
+}
+
+const eligibilityOutput = document.querySelector("#eligibilityOutput");
+
+const wordpressResult = createEligibilityReport("WordPress Developer", skills);
+const frontendResult = createEligibilityReport("Frontend Developer", skills);
+
+console.log("WordPress Result:", wordpressResult);
+console.log("Frontend Result:", frontendResult);
+
+eligibilityOutput.innerHTML = `
+  <h3>Eligibility Results</h3>
+  <p><strong>WordPress Developer:</strong> ${wordpressResult}</p>
+  <p><strong>Frontend Developer:</strong> ${frontendResult}</p>
+`;
