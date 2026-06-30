@@ -129,3 +129,40 @@ eligibilityOutput.innerHTML = `
   <p><strong>WordPress Developer:</strong> ${wordpressResult}</p>
   <p><strong>Frontend Developer:</strong> ${frontendResult}</p>
 `;
+
+const fullname = "Muhammad Saifullah";
+const location2 = "Bangkok, Thailand";
+const Age = 22;
+const learningfrontend = true;
+
+console.log("Full Name:", fullname);
+console.log("Location:", location2);
+console.log("Age:", Age);
+console.log("Learning Frontend Development:", learningfrontend);
+const developername = "Muhammad Saifullah";
+const developerlocation = "Bangkok, Thailand";
+let completedlessons = 1;
+let practiceScore = 0;
+const isLearningFrontendDevelopment = true;
+
+practiceScore += 10; // Increment practice score by 10 for completing a lesson
+practiceScore += 15; // Increment practice score by 5 for completing a practice task
+completedlessons += 1; // Increment completed lessons by 1
+
+console.log("Developer Name:", developername);
+console.log("Developer Location:", developerlocation);
+console.log("Completed Lessons:", completedlessons);
+console.log("Practice Score:", practiceScore);
+console.log("Learning Frontend Development:", isLearningFrontendDevelopment);
+const courseName = "JavaScript Basics";
+let lessonNumber = 1;
+let  lessonScore = 0;
+const studentName = "Muhammad Saifullah";
+
+lessonScore += 10; // Increment lesson score by 10 for completing a lesson
+lessonScore += 15; // Increment lesson score by 5 for completing a practice task
+lessonNumber += 1; // Increment lesson number by 1
+
+console.log(`${studentName} is studying ${courseName}.`);
+console.log(`Current Lesson Number: ${lessonNumber}`);
+console.log(`Lesson Score: ${lessonScore}/25`);
